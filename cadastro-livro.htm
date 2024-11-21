@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Livro</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/form-livro.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="lista-livros.html">LIVROS</a>
+            <a href="lista-alunos.html">ALUNOS</a>
+            <a href="lista-emprestimos.html">EMPRÉSTIMOS</a>
+        </nav>
+    </header>
+    <h1>CADASTRO DE LIVRO</h1>
+    <div class="container-formulario">
+        <form action="">
+            <div class="diresq">
+                <div class="esquerda">
+                    <label for="titulo">
+                        Titulo
+                        <br>
+                        <input type="text" name="input-titulo-livro" placeholder="Insira o titulo do livro" required>
+                    </label>
+                    <label for="autor">
+                        Autor
+                        <br>
+                        <input type="text" name="input-autor-livro" placeholder="Insira o autor do livro" required>
+                    </label>
+                    <label for="editora">
+                        Editora
+                        <br>
+                        <input type="text" name="input-editora-livro" placeholder="Insira a editora" required>
+                    </label>
+                    <label for="ano-publicacao">
+                        Ano de Publicação
+                        <br>
+                        <input type="number" name="input-ano-publicacao" placeholder="Insira o ano de publicação" required>
+                    </label>
+                </div>
+                <div class="direita">
+                    <label for="isbn">
+                        ISBN
+                        <br>
+                        <input type="number" name="input-isbn" placeholder="Insira o isbn do livro" required>
+                    </label>
+                    <label for="quant-total">
+                        Quantidade Total
+                        <br>
+                        <input type="number" name="input-quant-total" placeholder="Insira a quantidade total do livro" required>
+                    </label>
+                    <label for="quant-disponivel">
+                        Quantidade Disponivel
+                        <br>
+                        <input type="number" name="input-quant-disponivel" placeholder="Insira a quantidade disponivel do livro" required>
+                    </label>
+                    <label for="valor-aquisicao">
+                        Valor de Aquisição
+                        <br>
+                        <input type="number" name="input-valor-aquisicao" placeholder="Insira o valor de aquisição do livro" required>
+                    </label>
+                    <label for="status-emprestimo">
+                        Status de empréstimo
+                        <br>
+                        <input type="text" name="input-status-emprestimo" placeholder="Insira o status de empréstimo" required>
+                    </label>
+                </div>
+            </div>
+
+            <input type="button" value="CADASTRAR" onclick="enviaFormulario()">
+        </form>
+    </div>
+    <script src="js/livro.js"></script>
+</body>
+
+</html>

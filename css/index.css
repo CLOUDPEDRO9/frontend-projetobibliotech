@@ -1,0 +1,79 @@
+.parte-texto {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+}
+  
+.parte-livro {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel {
+    display: flex;
+    flex-direction: row;
+    margin-top: 215px;
+}
+
+.parte-texto div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    color: white;
+
+    height: 50%;
+    width: 30%;
+
+    border-radius: 5px;
+}
+
+.parte-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bibliotech-logo{
+    margin-top: 200px;
+    height: 230x;
+    width: 230px;
+}
+
+.texto-inicio{
+    margin-top: 40px;
+    font-weight: bolder;
+}
+
+.texto-central{
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 1.4rem;
+}
+
+.parte-livro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.abel{
+    width: 200px;
+    height: 270px;
+    margin-left: -225px;
+    margin-top: 70px;
+}
+.george{
+    width: 200px;
+    height: 250px;
+    margin-top: 5px;
+    margin-left: 175px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Empréstimo</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/form-emprestimo.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="lista-livros.html">LIVROS</a>
+            <a href="lista-alunos.html">ALUNOS</a>
+            <a href="lista-emprestimos.html">EMPRÉSTIMOS</a>
+        </nav>
+    </header>
+    <h1>CADASTRO DE PEDIDO</h1>
+    <div class="container-formulario">
+        <form action="">
+            <label for="cliente">
+                Cliente
+                <br>
+                <input type="text" name="input-cliente" placeholder="Selecione o cliente" required>
+            </label>
+            <label for="carro">
+                Carro
+                <br>
+                <input type="text" name="input-carro" placeholder="Selecione o carro" required>
+            </label>
+            <label for="data_pedido">
+                Data do pedido
+                <br>
+                <input type="date" name="input-data-pedido" placeholder="Insira a data do pedido" required>
+            </label>
+            <label for="valor_total">
+                Valor total do pedido
+                <br>
+                <input type="number" name="input-valor-total" placeholder="Insira o valor total do pedido" required>
+            </label>
+
+            <input type="button" value="CADASTRAR" onclick="enviaFormulario()">
+        </form>
+    </div>
+    <script src="js/pedido.js"></script>
+</body>
+
+</html>
