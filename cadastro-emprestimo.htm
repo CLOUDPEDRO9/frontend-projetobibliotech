@@ -19,34 +19,39 @@
             <a href="lista-emprestimos.html">EMPRÉSTIMOS</a>
         </nav>
     </header>
-    <h1>CADASTRO DE PEDIDO</h1>
+    <h1>CADASTRO DE EMPRÉSTIMO</h1>
     <div class="container-formulario">
         <form action="">
-            <label for="cliente">
-                Cliente
+            <label for="id_aluno">
+                ID Aluno
                 <br>
-                <input type="text" name="input-cliente" placeholder="Selecione o cliente" required>
+                <input type="number" name="input-aluno" placeholder="Insira o ID Aluno" required>
             </label>
-            <label for="carro">
-                Carro
+            <label for="id_livro">
+                ID Livro
                 <br>
-                <input type="text" name="input-carro" placeholder="Selecione o carro" required>
+                <input type="number" name="input-livro" placeholder="Insira o ID Livro" required>
             </label>
-            <label for="data_pedido">
-                Data do pedido
+            <label for="data_emprestimo">
+                Data emprestimo
                 <br>
-                <input type="date" name="input-data-pedido" placeholder="Insira a data do pedido" required>
+                <input type="date" name="input-data-emprestimo" placeholder="Insira a data de empréstimo" required>
             </label>
-            <label for="valor_total">
-                Valor total do pedido
+            <label for="data_devolucao">
+                Data devolução
                 <br>
-                <input type="number" name="input-valor-total" placeholder="Insira o valor total do pedido" required>
+                <input type="date" name="input-data-devolucao" placeholder="Insira a data de devolução" required>
+            </label>
+            <label for="status_emprestimo">
+                Status do emprestimo
+                <br>
+                <input type="text" name="status-emprestimo" placeholder="Insira o status de emprestimo" required>
             </label>
 
             <input type="button" value="CADASTRAR" onclick="enviaFormulario()">
         </form>
     </div>
-    <script src="js/pedido.js"></script>
+    <script src="js/emprestimo.js"></script>
 </body>
 
 </html>
