@@ -73,7 +73,7 @@ async function criarTabelaAlunos(alunos) {
 
 
         const dataNascimento = document.createElement('td');
-        dataNascimento.textContent = aluno.dataNascimento; // Preenche com a data de nascimento do aluno
+        dataNascimento.textContent = new Date (aluno.dataNascimento).toLocaleDateString('pt-br'); // Preenche com a data de nascimento do aluno
 
         const endereco = document.createElement('td');
         endereco.textContent = aluno.endereco; // Preenche com o endereço do aluno
@@ -94,6 +94,7 @@ async function criarTabelaAlunos(alunos) {
         const iconExcluir = document.createElement('img'); // Cria o elemento <img>
         iconExcluir.src = 'assets/icons/trash-fill.svg'; // Define o caminho da imagem
         iconExcluir.alt = 'Ícone de excluir'; // Texto alternativo para acessibilidade
+        iconExcluir.addEventListener('click', () => excluirAluno(aluno.idAluno));
 
 
         //chamando
@@ -114,4 +115,24 @@ async function criarTabelaAlunos(alunos) {
 
     });
 }
+
+async function excluirAluno(idAluno) {
+    const url = `http://localhost:3333/delete/aluno/${idAluno}`;
+
+    try {
+        const response = await fetch(url, { method: 'DELETE' });
+
+        if (response.ok) {
+            alert('aluno removido com sucesso');
+            window.location.reload();
+        } else {
+            const error = await response.json();
+            alert(`Erro: ${error}`);
+        }
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao tentar excluir o aluno.');
+    }
+}    
+
 

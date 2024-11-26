@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/navegacao.css">
     <link rel="stylesheet" href="css/listagem.css">
 </head>
-<body>
+<body onload="recuperarListaEmprestimos()">
     <header>
         <nav>
             <a href="lista-livros.html">LIVROS</a>
@@ -41,7 +41,8 @@
                     <th>AÇÕES</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="corpoEmprestimo">
+
             </tbody>
         </table>
     </div>

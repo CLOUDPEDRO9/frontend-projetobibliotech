@@ -88,7 +88,7 @@ async function criarTabelaLivros(Livros) {
         quantDisponivel.textContent = livro.quantDisponivel;
 
         const valorAquisicao = document.createElement('td');
-        valorAquisicao.textContent = livro.valorAquisicao;
+        valorAquisicao.textContent = `R$ ${livro.valorAquisicao}`;
 
         const statusLivroEmprestado = document.createElement('td');
         statusLivroEmprestado.textContent = livro.statusLivroEmprestado;
@@ -103,6 +103,8 @@ async function criarTabelaLivros(Livros) {
         const iconExcluir = document.createElement('img'); // Cria o elemento <img>
         iconExcluir.src = 'assets/icons/trash-fill.svg'; // Define o caminho da imagem
         iconExcluir.alt = 'Ícone de excluir'; // Texto alternativo para acessibilidade
+        iconExcluir.addEventListener('click', () => excluirLivro(livro.idLivro));
+
 
 
         //chamando
@@ -125,3 +127,22 @@ async function criarTabelaLivros(Livros) {
 
     });
 }
+
+async function excluirLivro(idLivro) {
+    const url = `http://localhost:3333/delete/livro/${idLivro}`;
+
+    try {
+        const response = await fetch(url, { method: 'DELETE' });
+
+        if (response.ok) {
+            alert('Livro removido com sucesso');
+            window.location.reload();
+        } else {
+            const error = await response.json();
+            alert(`Erro: ${error}`);
+        }
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao tentar excluir o livro.');
+    }
+}    
