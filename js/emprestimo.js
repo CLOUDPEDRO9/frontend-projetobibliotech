@@ -64,7 +64,7 @@ async function criarTabelaEmprestimos(emprestimos) {
         idAluno.hidden = true;
 
         const nomeAluno = document.createElement('td');
-        nomeAluno.textContent = emprestimo.nomeAluno;
+        nomeAluno.textContent = `${emprestimo.nomeAluno} ${emprestimo.sobrenomeAluno}`;
 
         const idLivro = document.createElement('td');
         idLivro.textContent = emprestimo.idLivro;
